@@ -25,6 +25,7 @@ def simple_test():
     print("Positions:",Ag.history['pos'][:10],"\n")
     print("Firing rate timeseries:",PCs.history['firingrate'][:10],"\n")
     print("Spikes:",PCs.history['spikes'][:10], "\n")
+    print("I changed this")
 
     # Plot the timeseries 
     Ag.plot_trajectory()
