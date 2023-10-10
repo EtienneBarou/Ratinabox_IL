@@ -1,5 +1,1 @@
-Hello, this is a test 
-
-Adding something new 
-
-What if I do this 
+This repo is meant to simulate a BTSP experiment with the ratinabox library. 
