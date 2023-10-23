@@ -1,10 +1,12 @@
 from ratinabox import Neurons
+from ratinabox import utils
 import numpy as np
-import matplotlib as plt 
+import matplotlib.pyplot as plt 
+
 
 class PyramidalNeurons(Neurons):
     """
-    The PyramidalNeuorn class defines a layer of Neurons() whos firing rates are derived from the 
+    The PyramidalNeuron class defines a layer of Neurons() whos firing rates are derived from the 
     firing rates in two DendriticCompartments. 
     They are theta modulated, during early theta phase the apical DendriticCompartment (self.apical_compartment) 
     drives the soma, during late theta phases the basal DendriticCompartment (self.basal_compartment) drives the 
@@ -21,7 +23,6 @@ class PyramidalNeurons(Neurons):
         • plot_loss()
         • plot_rate_map()
     """
-
     def __init__(self, Agent, params={}):
         """Initialises a layer of pyramidal neurons
 
@@ -50,7 +51,7 @@ class PyramidalNeurons(Neurons):
                 "name": f"{self.name}_basal",
                 "n": self.n,
                 "color": self.color,
-            },
+            },      
         )
         self.apical_compartment = DendriticCompartment(
             self.Agent,
